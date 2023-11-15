@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,25 +11,28 @@
 #body-grid {
   display: grid;
   grid-template-areas: "header" "main" "footer";
+  max-width: 1600px;
 }
 
 #header-flex {
+  grid-area: header;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   gap: 1.2rem;
   padding: 1.8rem;
   grid-area: header;
 }
 #header-flex a {
-  text-decoration: none;
   color: #000;
-  font-size: 1.1rem;
+  font-family: "Poppins", sans-serif;
 }
 #header-flex nav ul {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 1rem;
 }
 #header-flex nav ul li {
@@ -40,12 +44,33 @@
   text-decoration-thickness: 1.5px;
   text-decoration-color: #e6bd43;
   text-underline-offset: 0.2rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
   font-weight: 700;
+  font-style: normal;
+  text-align: center;
 }
 #header-flex nav ul #contact_page_navigation {
   background-color: #e6bd43;
   padding: 1rem 1.5rem 1rem 1.5rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
   font-weight: 700;
+  font-style: normal;
+  text-align: center;
+}
+#header-flex #back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+  cursor: pointer;
+}
+#header-flex #back-to-top img {
+  width: 40px;
+  height: auto;
+  background: #252525;
+  border-radius: 15%;
 }
 
 .logo img {
@@ -56,36 +81,45 @@
 main {
   grid-area: main;
 }
-main #compeling_section #compeling_section_1_background {
+main #compeling_section_1_background {
   background-image: url(../img/laptop-phone2.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
-main #compeling_section #compeling_section_1_background video {
+main #compeling_section_1_background video {
   display: none;
 }
-main #compeling_section #compeling_1 {
+main #compeling_section_1_background #compeling_1 {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 1.2rem;
   padding: 4rem 2.5rem 4rem 2.5rem;
-  font-size: 1.2rem;
+}
+main #compeling_section_1_background #compeling_1 h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-style: normal;
   text-align: center;
 }
-main #compeling_section #compeling_1 h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
-}
-main #compeling_section #compeling_1 p {
+main #compeling_section_1_background #compeling_1 p {
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 1.3rem;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
 }
-main #compeling_section #compeling_1 a {
+main #compeling_section_1_background #compeling_1 a {
   color: #000;
-  font-weight: 700;
   background-color: #e6bd43;
   padding: 1.2rem;
-  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-style: normal;
   text-align: left;
 }
 main #compeling_section #compeling_2 {
@@ -93,12 +127,17 @@ main #compeling_section #compeling_2 {
 }
 main #compeling_section #compeling_2 p {
   margin-top: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 1.3rem;
+  font-weight: 400;
+  font-style: normal;
   text-align: center;
 }
 main #compeling_section #compeling_2 h2 {
-  font-size: 1.7rem;
-  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  font-style: normal;
   text-align: center;
 }
 main #compeling_section2 {
@@ -115,22 +154,30 @@ main #compeling_section2 img {
 main #compeling_section2 article {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 1.5rem;
   padding: 2.5rem 5.5rem 4rem 5.5rem;
 }
 main #compeling_section2 article h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.3rem;
   font-weight: 700;
+  font-style: normal;
   text-align: left;
 }
 main #compeling_section2 article p {
   font-size: 1.3rem;
 }
 main #compeling_section2 article a {
-  border: #000 solid 2px;
-  padding: 1.5rem;
+  border: #000 solid 3px;
+  padding: 1.1rem;
   color: #000;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
   font-weight: 700;
-  font-size: 1.5rem;
+  font-style: normal;
+  text-align: left;
 }
 main .icons {
   width: 40px;
@@ -141,19 +188,40 @@ main #services {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 4rem;
+  gap: 3rem;
 }
 main #services h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-style: normal;
+  text-align: center;
   padding-top: 4rem;
 }
-main #services article {
+main #services #branding-elements {
   display: flex;
-  gap: 1rem;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+main #services #branding-elements article {
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  flex: 1 1 250px;
+  gap: 1rem;
 }
-main #services article p {
+main #services #branding-elements article h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-style: normal;
+  text-align: center;
+}
+main #services #branding-elements article p {
   padding: 0 2rem 0 2rem;
   text-align: center;
 }
@@ -163,10 +231,15 @@ main #newsletter {
   background-color: rgb(235, 233, 233);
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 1.2rem;
 }
 main #newsletter h2 {
+  font-family: "Poppins", sans-serif;
   font-size: 1.5rem;
+  font-weight: 700;
+  font-style: normal;
   text-align: center;
 }
 main #newsletter form input {
@@ -177,16 +250,20 @@ main #newsletter form button {
   background-color: #e6bd43;
   padding: 1rem;
   border: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8rem;
   font-weight: 700;
+  font-style: normal;
+  text-align: center;
 }
 
 footer {
   grid-area: footer;
   display: flex;
   flex-direction: column;
-  background-color: #252525;
   align-items: center;
   justify-content: center;
+  background-color: #252525;
   gap: 1.5rem;
   padding: 3rem;
 }
@@ -200,6 +277,8 @@ footer span {
 footer nav ul {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
   gap: 1.5rem;
 }
 footer nav ul li a img {
@@ -209,7 +288,7 @@ footer nav ul li a img {
   height: 30px;
 }
 
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1230px) {
   #header-flex {
     flex-direction: row;
     justify-content: space-between;
@@ -219,49 +298,108 @@ footer nav ul li a img {
     gap: 1rem;
     align-items: center;
   }
-  main #compeling_section #compeling_section_1_background {
+  #header-flex nav ul li a {
+    font-size: 1.1rem;
+  }
+  #header-flex nav ul #contact_page_navigation:hover {
+    background-color: #252525;
+  }
+  #header-flex nav ul #contact_page_navigation:hover a {
+    color: #e6bd43;
+  }
+  #header-flex #back-to-top {
+    bottom: 10px;
+    right: 60px;
+  }
+  #header-flex #back-to-top img {
+    width: 50px;
+  }
+  body {
+    grid-template-areas: "header header header" "main main main" "footer footer footer";
+  }
+  body main #compeling_section_1_background {
     position: relative;
     background-image: none;
   }
-  main #compeling_section #compeling_section_1_background video {
+  body main #compeling_section_1_background video {
     display: block;
     width: 100%;
     height: 30rem;
     opacity: 0.7;
     object-fit: cover;
   }
-  main #compeling_section #compeling_1 {
+  body main #compeling_section_1_background #compeling_1 {
     position: absolute;
     top: 3rem;
     margin: 0 15rem 0 15rem;
     gap: 2rem;
   }
-  main #compeling_section #compeling_1 h1 {
+  body main #compeling_section_1_background #compeling_1 h1 {
     font-size: 4rem;
   }
-  main #compeling_section #compeling_1 a {
+  body main #compeling_section_1_background #compeling_1 a {
     text-align: center;
     display: inline;
     align-self: center;
     width: 25rem;
   }
-  main #compeling_section #compeling_2 {
+  body main #compeling_section_1_background #compeling_1 a:hover {
+    background-color: #252525;
+    color: #e6bd43;
+  }
+  body main #compeling_section #compeling_2 {
     margin: 2rem 12rem 2rem 12rem;
   }
-  main #compeling_section #compeling_2 h2 {
+  body main #compeling_section #compeling_2 h2 {
     font-size: 3rem;
     margin-bottom: 3rem;
   }
-  main #compeling_section2 {
+  body main #compeling_section2 {
     flex-direction: row;
   }
-  main #compeling_section2 img {
+  body main #compeling_section2 img {
     padding: 3rem 0 3rem 3rem;
   }
-  main #compeling_section2 article {
+  body main #compeling_section2 article {
     padding: 2.5rem 5.5rem 4rem 3rem;
+    margin: 2rem 0rem 8rem 0rem;
   }
-  main #compeling_section2 article a {
+  body main #compeling_section2 article a {
     align-self: flex-start;
+  }
+  body main #compeling_section2 article a:hover {
+    background-color: #252525;
+    color: #e6bd43;
+  }
+  body main #services h2 {
+    font-size: 3rem;
+  }
+  body main #services #branding-elements {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0 6rem 0 6rem;
+  }
+  body main #newsletter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+  }
+  body main #newsletter h2 {
+    font-size: 3rem;
+  }
+  body main #newsletter button:hover {
+    background-color: #252525;
+    color: #e6bd43;
+  }
+  body footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
 }/*# sourceMappingURL=main.css.map */

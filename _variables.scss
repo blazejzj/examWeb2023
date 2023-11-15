@@ -1,0 +1,30 @@
+@mixin font-set($family: $basic_font, $size, $weight: normal, $style: normal, $align: left) {
+    font-family: $family;
+    font-size: $size;
+    font-weight: $weight;
+    font-style: $style;
+    text-align: $align;
+}
+
+@mixin flex($direction: row, $align: initial, $justify: initial) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+@mixin hover_button($bg-color: $grey-black, $text-color: $gold-yellow){
+    &:hover {
+        background-color: $bg-color;
+        color: $text-color;
+    }
+}
+
+
+
+$gold-yellow: #e6bd43;
+$grey-black: #252525;
+$black: #000;
+$white: #fff;
+$main-font: 'Poppins', sans-serif;
+$basic_font: Arial, Helvetica, sans-serif;
