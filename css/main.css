@@ -1,0 +1,267 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+#body-grid {
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+}
+
+#header-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.8rem;
+  grid-area: header;
+}
+#header-flex a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.1rem;
+}
+#header-flex nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#header-flex nav ul li {
+  list-style-type: none;
+  text-align: center;
+}
+#header-flex nav ul .current_page_navigation {
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-decoration-color: #e6bd43;
+  text-underline-offset: 0.2rem;
+  font-weight: 700;
+}
+#header-flex nav ul #contact_page_navigation {
+  background-color: #e6bd43;
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  font-weight: 700;
+}
+
+.logo img {
+  width: 125px;
+  height: 125px;
+}
+
+main {
+  grid-area: main;
+}
+main #compeling_section #compeling_section_1_background {
+  background-image: url(../img/laptop-phone2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+main #compeling_section #compeling_section_1_background video {
+  display: none;
+}
+main #compeling_section #compeling_1 {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: 4rem 2.5rem 4rem 2.5rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+main #compeling_section #compeling_1 h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+main #compeling_section #compeling_1 p {
+  font-size: 1.3rem;
+}
+main #compeling_section #compeling_1 a {
+  color: #000;
+  font-weight: 700;
+  background-color: #e6bd43;
+  padding: 1.2rem;
+  font-size: 1.5rem;
+  text-align: left;
+}
+main #compeling_section #compeling_2 {
+  padding: 4rem 2.7rem 4rem 2.7rem;
+}
+main #compeling_section #compeling_2 p {
+  margin-top: 2rem;
+  font-size: 1.3rem;
+  text-align: center;
+}
+main #compeling_section #compeling_2 h2 {
+  font-size: 1.7rem;
+  font-weight: bold;
+  text-align: center;
+}
+main #compeling_section2 {
+  background-color: #e6bd43;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+main #compeling_section2 img {
+  max-width: 100%;
+  padding: 2.5rem;
+}
+main #compeling_section2 article {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2.5rem 5.5rem 4rem 5.5rem;
+}
+main #compeling_section2 article h2 {
+  font-weight: 700;
+  text-align: left;
+}
+main #compeling_section2 article p {
+  font-size: 1.3rem;
+}
+main #compeling_section2 article a {
+  border: #000 solid 2px;
+  padding: 1.5rem;
+  color: #000;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+main .icons {
+  width: 40px;
+  height: 40px;
+}
+main #services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+main #services h2 {
+  padding-top: 4rem;
+}
+main #services article {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+main #services article p {
+  padding: 0 2rem 0 2rem;
+  text-align: center;
+}
+main #newsletter {
+  padding: 4rem 1.5rem 3rem 1.5rem;
+  margin-top: 4rem;
+  background-color: rgb(235, 233, 233);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+main #newsletter h2 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+main #newsletter form input {
+  padding: 1rem;
+  border: none;
+}
+main #newsletter form button {
+  background-color: #e6bd43;
+  padding: 1rem;
+  border: none;
+  font-weight: 700;
+}
+
+footer {
+  grid-area: footer;
+  display: flex;
+  flex-direction: column;
+  background-color: #252525;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 3rem;
+}
+footer a img {
+  width: 100px;
+  height: 100px;
+}
+footer span {
+  color: #fff;
+}
+footer nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+footer nav ul li a img {
+  background-color: white;
+  border-radius: 15%;
+  width: 30px;
+  height: 30px;
+}
+
+@media only screen and (min-width: 1400px) {
+  #header-flex {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #header-flex nav ul {
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+  }
+  main #compeling_section #compeling_section_1_background {
+    position: relative;
+    background-image: none;
+  }
+  main #compeling_section #compeling_section_1_background video {
+    display: block;
+    width: 100%;
+    height: 30rem;
+    opacity: 0.7;
+    object-fit: cover;
+  }
+  main #compeling_section #compeling_1 {
+    position: absolute;
+    top: 3rem;
+    margin: 0 15rem 0 15rem;
+    gap: 2rem;
+  }
+  main #compeling_section #compeling_1 h1 {
+    font-size: 4rem;
+  }
+  main #compeling_section #compeling_1 a {
+    text-align: center;
+    display: inline;
+    align-self: center;
+    width: 25rem;
+  }
+  main #compeling_section #compeling_2 {
+    margin: 2rem 12rem 2rem 12rem;
+  }
+  main #compeling_section #compeling_2 h2 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+  }
+  main #compeling_section2 {
+    flex-direction: row;
+  }
+  main #compeling_section2 img {
+    padding: 3rem 0 3rem 3rem;
+  }
+  main #compeling_section2 article {
+    padding: 2.5rem 5.5rem 4rem 3rem;
+  }
+  main #compeling_section2 article a {
+    align-self: flex-start;
+  }
+}/*# sourceMappingURL=main.css.map */
