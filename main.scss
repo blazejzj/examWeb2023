@@ -61,11 +61,10 @@
         right: 20px;
         z-index: 10;
         cursor: pointer;
-        img {
-            width: 40px;
-            height: auto;
-            background: $grey-black;
+        i {
+            background-color: $grey-black;
             border-radius: 15%;
+            padding: 2rem 1rem 2rem 1rem;
         }
     }
 }
@@ -79,13 +78,22 @@
 
 // MAIN
 
-main {
+#main-index {
     grid-area: main;
     #compeling_section_1_background {
-        background-image: url(../img/laptop-phone2.jpg);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
+        position: relative;
+        overflow: hidden;
+        .background-image-container {
+            background-image: url(../img/laptop-phone.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0.5;
+            z-index: -2;
+        }
         video {
             display: none;
         }
@@ -149,8 +157,8 @@ main {
     }
     
     .icons {
-        width: 40px;
-        height: 40px;
+        width: 150px;
+        height: 150px;
     }
     #services {
         @include flex(column, center, center);
@@ -202,6 +210,224 @@ main {
     }
 }
 
+// PORTOFOLIO / PRODUCTS
+
+#portofolio-main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    #portofolio-background {
+        @include flex(column, center, center);
+        position: relative;
+        width: 100%;
+        height: 20rem;
+        #portofolio-background-picture {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url(../img/laptop-phone.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            opacity: 0.5;
+            z-index: -1;
+        }
+        h1 {
+            @include font-set($main-font, 2rem, 700, normal, center);
+            z-index: 1;
+        }
+    }
+    #portofolio-content {
+        padding: 3rem 3rem 0 3rem;
+        nav {
+            @include flex(column, left, center);
+            h2 {
+                width: 100%;
+                margin-bottom: 3rem;
+                border-bottom: 3px solid $gold-yellow;
+                padding-bottom: 0.5rem;
+                @include font-set($main-font, 1.2rem, 700, normal, left);
+            }
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1.5rem;
+                li {
+                    a {
+                        color: $black;
+                        border: 1px solid black;
+                        padding: 0.5rem;
+                    }
+                }
+            }
+        }
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            article {
+                flex-grow: 1;
+                max-width: 692px;
+            }
+        }
+    }
+}
+
+.portofolio-subheading {
+    margin: 1rem 0 2rem 0;
+    @include font-set($main-font, 1.15rem, 700, normal, left);
+}
+.portofolio-headings {
+    width: 100%;
+    margin: 3rem 0 3rem 0;
+    border-bottom: 3px solid $gold-yellow;
+    padding-bottom: 0.5rem;
+    @include font-set($main-font, 1.2rem, 700, normal, left);
+}
+
+.images {
+    width: 100%;
+    min-width: 200px;
+    height: auto;
+}
+
+// ABOUT PAGE
+
+#about-main {
+    grid-area: main;
+    #about-background {
+        background-image: url(../img/laptop-phone.jpg);
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+        #about-background-content {
+            @include flex(column, left, center);
+            gap: 1rem;
+            background-color: rgba(255, 255, 255, 0.7);
+            margin: 2rem;
+            padding: 3rem;
+            h1 {
+                @include font-set($main-font, 1.2rem, 700, normal, left);
+            }
+            span {
+                @include font-set($main-font, 1rem, 300, normal, left);
+            }
+            a {
+                color: $black;
+                background-color: $gold-yellow;
+                padding: 1rem;
+                @include font-set($main-font, 1rem, 700, normal, left);
+            }
+        }
+    }
+    #about-clients {
+        margin-top: 2rem;
+        background-color: $gold-yellow;
+        @include flex(column, center, center);
+        h2 {
+            padding: 3rem;
+        }
+        article {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            margin-bottom: 3rem;
+            img {
+                width: 25vw;
+                min-width: 150px;
+                max-width: 200px; 
+                height: auto;
+                padding: 1rem;
+            }
+        }
+    }
+    #about-contact-container {
+        display: grid;
+        grid-template-areas: 
+        "contact-title"
+        "contact-us"
+        "contact-information";
+        padding: 2rem;
+        background-color: rgb(245, 242, 242);
+        h2 {
+            grid-area: contact-title;
+            @include font-set($main-font, 1.5rem, 700, normal, center);
+            padding: 3rem 0 5rem 0;
+        }
+        #contact-us {
+            grid-area: contact-us;
+            h3 {
+                @include font-set($main-font, 1.2rem, 700, normal, left);
+            }
+            form {
+                @include flex(column, left, left);
+                label {
+                    @include font-set($main-font, 1.0.5rem, 400, normal, left);
+                    padding: 0.3rem 0 0.3rem 0;
+                }
+                input {
+                    padding: 1rem;
+                    outline: none;
+                    border: none;
+                }
+                textarea {
+                    height: 16vh;
+                    padding: 0.2rem;
+                    border: none;
+                }
+                button {
+                    margin: 0.5rem 1rem 2rem 0;
+                    width: 40%;
+                    background-color: $gold-yellow;
+                    padding: 0.8rem;
+                    border: none;
+                    @include font-set($main-font, 0.8rem, 700, normal, left);
+                }
+            }
+    }
+        #contact-information {
+            grid-area: contact-information;
+            @include flex(column, left, left);
+            gap: 1.3rem;
+            background-color: rgb(245, 242, 242);
+            h3 {
+                @include font-set($main-font, 1.2rem, 700, normal, left);
+            }
+            ul {
+                @include flex(column, left, left);
+                gap: 1rem;
+                li {
+                    padding: 0.2rem;
+                    i {
+                        margin-right: 1rem;
+                    }
+                    a{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+    #about-school-map {
+        width: 100%;
+        height: 15rem;
+        margin: 0;
+        padding: 0;
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    }
+}
+
+.about-icons {
+    width: 20px;
+    height: 20px;
+}
 // FOOTER
 
 footer {
@@ -272,15 +498,16 @@ footer {
         }
     }
 }
-body {
+#body-grid {
     grid-template-areas: 
     "header header header"
     "main main main"
     "footer footer footer";
     main {
         #compeling_section_1_background {
-            position: relative;
-            background-image: none;
+            .background-image-container {
+                display: none;
+            }
             video {
                 display: block;
                 width: 100%;;
@@ -349,6 +576,94 @@ body {
             }
         }
     }
+
+    // PORTOFOLIO / PRODUCTS
+
+    #portofolio-main {
+        #portofolio-background {
+            h1 {
+                font-size: 4rem;
+            }
+        }
+        #portofolio-content {
+            nav {
+                h2 {
+                    font-size: 3rem;
+                    margin-bottom: 4.5rem;
+                }
+                ul {
+                    li {
+                        a {
+                            font-size: 1.1rem;
+                            @include hover_button($grey-black, $gold-yellow);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .portofolio-subheading {
+        font-size: 1.5rem;
+    }
+    .portofolio-headings {
+        font-size: 3rem;
+    }
+
+    .images {
+        transform: scale(1);
+        transition: transform 0.8s ease-in-out;
+        &:hover {
+            transform: scale(1.06);
+        }
+    }
+
+
+    // ABOUT 
+
+    #about-main {
+        #about-background {
+            #about-background-content {
+                margin-left: auto;
+                margin-right: 0;
+                max-width: 50%;
+                a {
+                    max-width: 35%;
+                    @include hover_button($grey-black, $gold-yellow);
+                }
+            }
+        }
+        #about-clients {
+            article {
+                gap: 2rem;
+            }
+        }
+        #about-contact-container {
+            padding: 5rem;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            grid-template-areas: 
+            "contact-title contact-title"
+            "contact-us contact-information";
+            #contact-us{
+                margin-left: 5rem;
+                button {
+                    padding: 1rem;
+                    width: 30%;
+                    @include hover_button($grey-black, $gold-yellow);
+                }
+            }
+            #contact-information {
+                margin-right: 5rem;
+            }
+            h2 {
+                font-size: 3rem;
+                padding: 0
+            }
+        }
+    }
+
+    // FOOTER
     footer {
         @include flex(row, center, space-between);
     }

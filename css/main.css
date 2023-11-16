@@ -66,11 +66,10 @@
   z-index: 10;
   cursor: pointer;
 }
-#header-flex #back-to-top img {
-  width: 40px;
-  height: auto;
-  background: #252525;
+#header-flex #back-to-top i {
+  background-color: #252525;
   border-radius: 15%;
+  padding: 2rem 1rem 2rem 1rem;
 }
 
 .logo img {
@@ -78,19 +77,28 @@
   height: 125px;
 }
 
-main {
+#main-index {
   grid-area: main;
 }
-main #compeling_section_1_background {
-  background-image: url(../img/laptop-phone2.jpg);
+#main-index #compeling_section_1_background {
+  position: relative;
+  overflow: hidden;
+}
+#main-index #compeling_section_1_background .background-image-container {
+  background-image: url(../img/laptop-phone.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  z-index: -2;
 }
-main #compeling_section_1_background video {
+#main-index #compeling_section_1_background video {
   display: none;
 }
-main #compeling_section_1_background #compeling_1 {
+#main-index #compeling_section_1_background #compeling_1 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -98,21 +106,21 @@ main #compeling_section_1_background #compeling_1 {
   gap: 1.2rem;
   padding: 4rem 2.5rem 4rem 2.5rem;
 }
-main #compeling_section_1_background #compeling_1 h1 {
+#main-index #compeling_section_1_background #compeling_1 h1 {
   font-family: "Poppins", sans-serif;
   font-size: 2.5rem;
   font-weight: 700;
   font-style: normal;
   text-align: center;
 }
-main #compeling_section_1_background #compeling_1 p {
+#main-index #compeling_section_1_background #compeling_1 p {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.3rem;
   font-weight: 400;
   font-style: normal;
   text-align: center;
 }
-main #compeling_section_1_background #compeling_1 a {
+#main-index #compeling_section_1_background #compeling_1 a {
   color: #000;
   background-color: #e6bd43;
   padding: 1.2rem;
@@ -122,10 +130,10 @@ main #compeling_section_1_background #compeling_1 a {
   font-style: normal;
   text-align: left;
 }
-main #compeling_section #compeling_2 {
+#main-index #compeling_section #compeling_2 {
   padding: 4rem 2.7rem 4rem 2.7rem;
 }
-main #compeling_section #compeling_2 p {
+#main-index #compeling_section #compeling_2 p {
   margin-top: 2rem;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.3rem;
@@ -133,25 +141,25 @@ main #compeling_section #compeling_2 p {
   font-style: normal;
   text-align: center;
 }
-main #compeling_section #compeling_2 h2 {
+#main-index #compeling_section #compeling_2 h2 {
   font-family: "Poppins", sans-serif;
   font-size: 1.3rem;
   font-weight: 700;
   font-style: normal;
   text-align: center;
 }
-main #compeling_section2 {
+#main-index #compeling_section2 {
   background-color: #e6bd43;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-main #compeling_section2 img {
+#main-index #compeling_section2 img {
   max-width: 100%;
   padding: 2.5rem;
 }
-main #compeling_section2 article {
+#main-index #compeling_section2 article {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -159,17 +167,17 @@ main #compeling_section2 article {
   gap: 1.5rem;
   padding: 2.5rem 5.5rem 4rem 5.5rem;
 }
-main #compeling_section2 article h2 {
+#main-index #compeling_section2 article h2 {
   font-family: "Poppins", sans-serif;
   font-size: 1.3rem;
   font-weight: 700;
   font-style: normal;
   text-align: left;
 }
-main #compeling_section2 article p {
+#main-index #compeling_section2 article p {
   font-size: 1.3rem;
 }
-main #compeling_section2 article a {
+#main-index #compeling_section2 article a {
   border: #000 solid 3px;
   padding: 1.1rem;
   color: #000;
@@ -179,18 +187,18 @@ main #compeling_section2 article a {
   font-style: normal;
   text-align: left;
 }
-main .icons {
-  width: 40px;
-  height: 40px;
+#main-index .icons {
+  width: 150px;
+  height: 150px;
 }
-main #services {
+#main-index #services {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 3rem;
 }
-main #services h2 {
+#main-index #services h2 {
   font-family: "Poppins", sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
@@ -198,7 +206,7 @@ main #services h2 {
   text-align: center;
   padding-top: 4rem;
 }
-main #services #branding-elements {
+#main-index #services #branding-elements {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -206,7 +214,7 @@ main #services #branding-elements {
   flex-wrap: wrap;
   gap: 2rem;
 }
-main #services #branding-elements article {
+#main-index #services #branding-elements article {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -214,18 +222,18 @@ main #services #branding-elements article {
   flex: 1 1 250px;
   gap: 1rem;
 }
-main #services #branding-elements article h3 {
+#main-index #services #branding-elements article h3 {
   font-family: "Poppins", sans-serif;
   font-size: 1.2rem;
   font-weight: 700;
   font-style: normal;
   text-align: center;
 }
-main #services #branding-elements article p {
+#main-index #services #branding-elements article p {
   padding: 0 2rem 0 2rem;
   text-align: center;
 }
-main #newsletter {
+#main-index #newsletter {
   padding: 4rem 1.5rem 3rem 1.5rem;
   margin-top: 4rem;
   background-color: rgb(235, 233, 233);
@@ -235,18 +243,18 @@ main #newsletter {
   justify-content: center;
   gap: 1.2rem;
 }
-main #newsletter h2 {
+#main-index #newsletter h2 {
   font-family: "Poppins", sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
   font-style: normal;
   text-align: center;
 }
-main #newsletter form input {
+#main-index #newsletter form input {
   padding: 1rem;
   border: none;
 }
-main #newsletter form button {
+#main-index #newsletter form button {
   background-color: #e6bd43;
   padding: 1rem;
   border: none;
@@ -255,6 +263,286 @@ main #newsletter form button {
   font-weight: 700;
   font-style: normal;
   text-align: center;
+}
+
+#portofolio-main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#portofolio-main #portofolio-background {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 20rem;
+}
+#portofolio-main #portofolio-background #portofolio-background-picture {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/laptop-phone.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.5;
+  z-index: -1;
+}
+#portofolio-main #portofolio-background h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  font-style: normal;
+  text-align: center;
+  z-index: 1;
+}
+#portofolio-main #portofolio-content {
+  padding: 3rem 3rem 0 3rem;
+}
+#portofolio-main #portofolio-content nav {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+}
+#portofolio-main #portofolio-content nav h2 {
+  width: 100%;
+  margin-bottom: 3rem;
+  border-bottom: 3px solid #e6bd43;
+  padding-bottom: 0.5rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-style: normal;
+  text-align: left;
+}
+#portofolio-main #portofolio-content nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+#portofolio-main #portofolio-content nav ul li a {
+  color: #000;
+  border: 1px solid black;
+  padding: 0.5rem;
+}
+#portofolio-main #portofolio-content section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+#portofolio-main #portofolio-content section article {
+  flex-grow: 1;
+  max-width: 692px;
+}
+
+.portofolio-subheading {
+  margin: 1rem 0 2rem 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  font-style: normal;
+  text-align: left;
+}
+
+.portofolio-headings {
+  width: 100%;
+  margin: 3rem 0 3rem 0;
+  border-bottom: 3px solid #e6bd43;
+  padding-bottom: 0.5rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-style: normal;
+  text-align: left;
+}
+
+.images {
+  width: 100%;
+  min-width: 200px;
+  height: auto;
+}
+
+#about-main {
+  grid-area: main;
+}
+#about-main #about-background {
+  background-image: url(../img/laptop-phone.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+}
+#about-main #about-background #about-background-content {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  gap: 1rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin: 2rem;
+  padding: 3rem;
+}
+#about-main #about-background #about-background-content h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-style: normal;
+  text-align: left;
+}
+#about-main #about-background #about-background-content span {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  font-style: normal;
+  text-align: left;
+}
+#about-main #about-background #about-background-content a {
+  color: #000;
+  background-color: #e6bd43;
+  padding: 1rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  font-style: normal;
+  text-align: left;
+}
+#about-main #about-clients {
+  margin-top: 2rem;
+  background-color: #e6bd43;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#about-main #about-clients h2 {
+  padding: 3rem;
+}
+#about-main #about-clients article {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 3rem;
+}
+#about-main #about-clients article img {
+  width: 25vw;
+  min-width: 150px;
+  max-width: 200px;
+  height: auto;
+  padding: 1rem;
+}
+#about-main #about-contact-container {
+  display: grid;
+  grid-template-areas: "contact-title" "contact-us" "contact-information";
+  padding: 2rem;
+  background-color: rgb(245, 242, 242);
+}
+#about-main #about-contact-container h2 {
+  grid-area: contact-title;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-style: normal;
+  text-align: center;
+  padding: 3rem 0 5rem 0;
+}
+#about-main #about-contact-container #contact-us {
+  grid-area: contact-us;
+}
+#about-main #about-contact-container #contact-us h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-style: normal;
+  text-align: left;
+}
+#about-main #about-contact-container #contact-us form {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+}
+#about-main #about-contact-container #contact-us form label {
+  font-family: "Poppins", sans-serif;
+  font-size: 1 0.5rem;
+  font-weight: 400;
+  font-style: normal;
+  text-align: left;
+  padding: 0.3rem 0 0.3rem 0;
+}
+#about-main #about-contact-container #contact-us form input {
+  padding: 1rem;
+  outline: none;
+  border: none;
+}
+#about-main #about-contact-container #contact-us form textarea {
+  height: 16vh;
+  padding: 0.2rem;
+  border: none;
+}
+#about-main #about-contact-container #contact-us form button {
+  margin: 0.5rem 1rem 2rem 0;
+  width: 40%;
+  background-color: #e6bd43;
+  padding: 0.8rem;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-style: normal;
+  text-align: left;
+}
+#about-main #about-contact-container #contact-information {
+  grid-area: contact-information;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  gap: 1.3rem;
+  background-color: rgb(245, 242, 242);
+}
+#about-main #about-contact-container #contact-information h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-style: normal;
+  text-align: left;
+}
+#about-main #about-contact-container #contact-information ul {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  gap: 1rem;
+}
+#about-main #about-contact-container #contact-information ul li {
+  padding: 0.2rem;
+}
+#about-main #about-contact-container #contact-information ul li i {
+  margin-right: 1rem;
+}
+#about-main #about-contact-container #contact-information ul li a {
+  text-decoration: underline;
+}
+#about-main #about-school-map {
+  width: 100%;
+  height: 15rem;
+  margin: 0;
+  padding: 0;
+}
+#about-main #about-school-map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.about-icons {
+  width: 20px;
+  height: 20px;
 }
 
 footer {
@@ -314,67 +602,66 @@ footer nav ul li a img {
   #header-flex #back-to-top img {
     width: 50px;
   }
-  body {
+  #body-grid {
     grid-template-areas: "header header header" "main main main" "footer footer footer";
   }
-  body main #compeling_section_1_background {
-    position: relative;
-    background-image: none;
+  #body-grid main #compeling_section_1_background .background-image-container {
+    display: none;
   }
-  body main #compeling_section_1_background video {
+  #body-grid main #compeling_section_1_background video {
     display: block;
     width: 100%;
     height: 30rem;
     opacity: 0.7;
     object-fit: cover;
   }
-  body main #compeling_section_1_background #compeling_1 {
+  #body-grid main #compeling_section_1_background #compeling_1 {
     position: absolute;
     top: 3rem;
     margin: 0 15rem 0 15rem;
     gap: 2rem;
   }
-  body main #compeling_section_1_background #compeling_1 h1 {
+  #body-grid main #compeling_section_1_background #compeling_1 h1 {
     font-size: 4rem;
   }
-  body main #compeling_section_1_background #compeling_1 a {
+  #body-grid main #compeling_section_1_background #compeling_1 a {
     text-align: center;
     display: inline;
     align-self: center;
     width: 25rem;
   }
-  body main #compeling_section_1_background #compeling_1 a:hover {
+  #body-grid main #compeling_section_1_background #compeling_1 a:hover {
     background-color: #252525;
     color: #e6bd43;
   }
-  body main #compeling_section #compeling_2 {
+  #body-grid main #compeling_section #compeling_2 {
     margin: 2rem 12rem 2rem 12rem;
   }
-  body main #compeling_section #compeling_2 h2 {
+  #body-grid main #compeling_section #compeling_2 h2 {
     font-size: 3rem;
     margin-bottom: 3rem;
   }
-  body main #compeling_section2 {
+  #body-grid main #compeling_section2 {
     flex-direction: row;
   }
-  body main #compeling_section2 img {
+  #body-grid main #compeling_section2 img {
     padding: 3rem 0 3rem 3rem;
   }
-  body main #compeling_section2 article {
+  #body-grid main #compeling_section2 article {
     padding: 2.5rem 5.5rem 4rem 3rem;
     margin: 2rem 0rem 8rem 0rem;
   }
-  body main #compeling_section2 article a {
+  #body-grid main #compeling_section2 article a {
     align-self: flex-start;
   }
-  body main #compeling_section2 article a:hover {
+  #body-grid main #compeling_section2 article a:hover {
     background-color: #252525;
     color: #e6bd43;
   }
-  body main #services h2 {
+  #body-grid main #services h2 {
     font-size: 3rem;
   }
-  body main #services #branding-elements {
+  #body-grid main #services #branding-elements {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -382,21 +669,87 @@ footer nav ul li a img {
     gap: 2rem;
     margin: 0 6rem 0 6rem;
   }
-  body main #newsletter {
+  #body-grid main #newsletter {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 3rem;
   }
-  body main #newsletter h2 {
+  #body-grid main #newsletter h2 {
     font-size: 3rem;
   }
-  body main #newsletter button:hover {
+  #body-grid main #newsletter button:hover {
     background-color: #252525;
     color: #e6bd43;
   }
-  body footer {
+  #body-grid #portofolio-main #portofolio-background h1 {
+    font-size: 4rem;
+  }
+  #body-grid #portofolio-main #portofolio-content nav h2 {
+    font-size: 3rem;
+    margin-bottom: 4.5rem;
+  }
+  #body-grid #portofolio-main #portofolio-content nav ul li a {
+    font-size: 1.1rem;
+  }
+  #body-grid #portofolio-main #portofolio-content nav ul li a:hover {
+    background-color: #252525;
+    color: #e6bd43;
+  }
+  #body-grid .portofolio-subheading {
+    font-size: 1.5rem;
+  }
+  #body-grid .portofolio-headings {
+    font-size: 3rem;
+  }
+  #body-grid .images {
+    transform: scale(1);
+    transition: transform 0.8s ease-in-out;
+  }
+  #body-grid .images:hover {
+    transform: scale(1.06);
+  }
+  #body-grid #about-main #about-background #about-background-content {
+    margin-left: auto;
+    margin-right: 0;
+    max-width: 50%;
+  }
+  #body-grid #about-main #about-background #about-background-content a {
+    max-width: 35%;
+  }
+  #body-grid #about-main #about-background #about-background-content a:hover {
+    background-color: #252525;
+    color: #e6bd43;
+  }
+  #body-grid #about-main #about-clients article {
+    gap: 2rem;
+  }
+  #body-grid #about-main #about-contact-container {
+    padding: 5rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    grid-template-areas: "contact-title contact-title" "contact-us contact-information";
+  }
+  #body-grid #about-main #about-contact-container #contact-us {
+    margin-left: 5rem;
+  }
+  #body-grid #about-main #about-contact-container #contact-us button {
+    padding: 1rem;
+    width: 30%;
+  }
+  #body-grid #about-main #about-contact-container #contact-us button:hover {
+    background-color: #252525;
+    color: #e6bd43;
+  }
+  #body-grid #about-main #about-contact-container #contact-information {
+    margin-right: 5rem;
+  }
+  #body-grid #about-main #about-contact-container h2 {
+    font-size: 3rem;
+    padding: 0;
+  }
+  #body-grid footer {
     display: flex;
     flex-direction: row;
     align-items: center;
