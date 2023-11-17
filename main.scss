@@ -22,12 +22,27 @@
 }
 
 // HEADER
+.skip-link {
+    position: absolute;
+    @include font-set($main-font, 0.7rem, 700, normal, left);
+    top: -500rem;
+    left: -500rem;
+    &:focus {
+        left: 15rem;
+        top: 0.5rem;
+        background-color: rgb(231, 231, 231);
+    }
+}
+
+.hidden {
+    display: none;
+}
 
 #header-flex{
     grid-area: header;
     @include flex(column, center, center);
-    gap: 1.2rem;
-    padding: 1.8rem;
+    gap: 0.5rem;
+    padding: 1rem;
     grid-area: header;
     a {
         color: $black;
@@ -36,10 +51,17 @@
     nav {
         ul {
             @include flex(column, center, center);
-            gap: 1rem;
+            gap: 0.5rem;
             li {
                 list-style-type: none;
                 text-align: center;
+                #contact_page_navigation {
+                    background-color: $gold-yellow;
+                    padding: 1rem 1.5rem 1rem 1.5rem;
+                    @include font-set($main-font, 1.1rem, 700, normal, center);
+                    display: block;
+                    margin: 0.8rem 0 0 0rem;
+                }
             }
             .current_page_navigation {
                 text-decoration: underline;
@@ -48,37 +70,20 @@
                 text-underline-offset: 0.2rem;
                 @include font-set($main-font, 1.1rem, 700, normal, center);
             }
-            #contact_page_navigation {
-                background-color: $gold-yellow;
-                padding: 1rem 1.5rem 1rem 1.5rem;
-                @include font-set($main-font, 1.1rem, 700, normal, center);
-            }
-        }
-    }
-    #back-to-top {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 10;
-        cursor: pointer;
-        i {
-            background-color: $grey-black;
-            border-radius: 15%;
-            padding: 2rem 1rem 2rem 1rem;
         }
     }
 }
 
 .logo {
     img {
-        width: 125px;
-        height: 125px;
+        width: 100px;
+        height: 100px;
     }
 }
 
 // MAIN
 
-#main-index {
+#main-index, #about-main {
     grid-area: main;
     #compeling_section_1_background {
         position: relative;
@@ -121,6 +126,9 @@
             p {
                 margin-top: 2rem;
                 @include font-set($basic_font, 1.3rem, 400, normal, center);
+                &:focus {
+                    outline: 2px transparent;
+                }
             }
             h2 {
                 @include font-set($main-font, 1.3rem, 700, normal, center);
@@ -329,6 +337,9 @@
         @include flex(column, center, center);
         h2 {
             padding: 3rem;
+            &:focus {
+                outline: 2px transparent;
+            }
         }
         article {
             display: flex;
@@ -463,10 +474,27 @@ footer {
     }
 }
 
-
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10;
+    cursor: pointer;
+    i {
+        background-color: $grey-black;
+        border-radius: 15%;
+        padding: 2rem 1rem 2rem 1rem;
+    }
+}
 
 @media only screen and (min-width:1230px) {
 
+.logo {
+    img {
+        width: 130px;
+        height: 130px;
+    }
+}
 #header-flex {
     flex-direction: row;
     justify-content: space-between;
@@ -479,11 +507,10 @@ footer {
                 a {
                     font-size: 1.1rem;
                 }
-            }
-            #contact_page_navigation {
-                &:hover {
-                    background-color: $grey-black;
-                    a {
+                #contact_page_navigation {
+                    margin: 0;
+                    &:hover {
+                        background-color: $grey-black;
                         color: $gold-yellow;
                     }
                 }
@@ -498,6 +525,7 @@ footer {
         }
     }
 }
+
 #body-grid {
     grid-template-areas: 
     "header header header"
@@ -511,8 +539,9 @@ footer {
             video {
                 display: block;
                 width: 100%;;
-                height: 30rem;
-                opacity: 0.7;
+                height: auto;
+                max-height: 30rem;
+                opacity: 0.6;
                 object-fit: cover;
             }
             #compeling_1 {
