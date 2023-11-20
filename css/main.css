@@ -140,10 +140,10 @@
   font-style: normal;
   text-align: left;
 }
-#main-index #compeling_section #compeling_2, #about-main #compeling_section #compeling_2 {
+#main-index #compeling_2, #about-main #compeling_2 {
   padding: 4rem 2.7rem 4rem 2.7rem;
 }
-#main-index #compeling_section #compeling_2 p, #about-main #compeling_section #compeling_2 p {
+#main-index #compeling_2 p, #about-main #compeling_2 p {
   margin-top: 2rem;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.3rem;
@@ -151,10 +151,10 @@
   font-style: normal;
   text-align: center;
 }
-#main-index #compeling_section #compeling_2 p:focus, #about-main #compeling_section #compeling_2 p:focus {
+#main-index #compeling_2 p:focus, #about-main #compeling_2 p:focus {
   outline: 2px transparent;
 }
-#main-index #compeling_section #compeling_2 h2, #about-main #compeling_section #compeling_2 h2 {
+#main-index #compeling_2 h2, #about-main #compeling_2 h2 {
   font-family: "Poppins", sans-serif;
   font-size: 1.3rem;
   font-weight: 700;
@@ -547,8 +547,6 @@
 #about-main #about-school-map {
   width: 100%;
   height: 15rem;
-  margin: 0;
-  padding: 0;
 }
 #about-main #about-school-map iframe {
   width: 100%;
@@ -605,11 +603,7 @@ footer nav ul li a img {
   padding: 2rem 1rem 2rem 1rem;
 }
 
-@media only screen and (min-width: 1230px) {
-  .logo img {
-    width: 130px;
-    height: 130px;
-  }
+@media only screen and (min-width: 636px) {
   #header-flex {
     flex-direction: row;
     justify-content: space-between;
@@ -635,6 +629,18 @@ footer nav ul li a img {
   }
   #header-flex #back-to-top img {
     width: 50px;
+  }
+  footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+@media only screen and (min-width: 1230px) {
+  .logo img {
+    width: 130px;
+    height: 130px;
   }
   #body-grid {
     grid-template-areas: "header header header" "main main main" "footer footer footer";
@@ -669,10 +675,10 @@ footer nav ul li a img {
     background-color: #252525;
     color: #e6bd43;
   }
-  #body-grid main #compeling_section #compeling_2 {
+  #body-grid main #compeling_2 {
     margin: 2rem 12rem 2rem 12rem;
   }
-  #body-grid main #compeling_section #compeling_2 h2 {
+  #body-grid main #compeling_2 h2 {
     font-size: 3rem;
     margin-bottom: 3rem;
   }
@@ -705,11 +711,7 @@ footer nav ul li a img {
     margin: 0 6rem 0 6rem;
   }
   #body-grid main #newsletter {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 3rem;
+    gap: 1.5rem;
   }
   #body-grid main #newsletter h2 {
     font-size: 3rem;
@@ -757,17 +759,25 @@ footer nav ul li a img {
     background-color: #252525;
     color: #e6bd43;
   }
+  #body-grid #about-main #about-clients h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+    margin: 2rem;
+  }
   #body-grid #about-main #about-clients article {
     gap: 2rem;
   }
   #body-grid #about-main #about-contact-container {
-    padding: 5rem;
+    padding: 5rem 5rem 0 5rem;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     grid-template-areas: "contact-title contact-title" "contact-us contact-information";
   }
   #body-grid #about-main #about-contact-container #contact-us {
-    margin-left: 5rem;
+    margin-left: 10rem;
   }
   #body-grid #about-main #about-contact-container #contact-us button {
     padding: 1rem;
@@ -783,11 +793,5 @@ footer nav ul li a img {
   #body-grid #about-main #about-contact-container h2 {
     font-size: 3rem;
     padding: 0;
-  }
-  #body-grid footer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
   }
 }/*# sourceMappingURL=main.css.map */

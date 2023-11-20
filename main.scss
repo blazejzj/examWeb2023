@@ -120,19 +120,17 @@
             }
         }
     }
-    #compeling_section {
-        #compeling_2 {
-            padding: 4rem 2.7rem 4rem 2.7rem;
-            p {
-                margin-top: 2rem;
-                @include font-set($basic_font, 1.3rem, 400, normal, center);
-                &:focus {
-                    outline: 2px transparent;
-                }
+    #compeling_2 {
+        padding: 4rem 2.7rem 4rem 2.7rem;
+        p {
+            margin-top: 2rem;
+            @include font-set($basic_font, 1.3rem, 400, normal, center);
+            &:focus {
+                outline: 2px transparent;
             }
-            h2 {
-                @include font-set($main-font, 1.3rem, 700, normal, center);
-            }
+        }
+        h2 {
+            @include font-set($main-font, 1.3rem, 700, normal, center);
         }
     }
     
@@ -425,8 +423,6 @@
     #about-school-map {
         width: 100%;
         height: 15rem;
-        margin: 0;
-        padding: 0;
         iframe {
             width: 100%;
             height: 100%;
@@ -487,6 +483,44 @@ footer {
     }
 }
 
+@media only screen and (min-width:636px) {
+    
+    #header-flex {
+        flex-direction: row;
+        justify-content: space-between;
+        nav {
+            ul {
+                flex-direction: row;
+                gap: 1rem;
+                align-items: center;
+                li {
+                    a {
+                        font-size: 1.1rem;
+                    }
+                    #contact_page_navigation {
+                        margin: 0;
+                        &:hover {
+                            background-color: $grey-black;
+                            color: $gold-yellow;
+                        }
+                    }
+                }
+            }
+        }
+        #back-to-top {
+            bottom: 10px;
+            right: 60px;
+            img {
+                width: 50px;
+            }
+        }
+    }
+    footer {
+        @include flex(row, center, space-between);
+    }
+
+}
+
 @media only screen and (min-width:1230px) {
 
 .logo {
@@ -495,36 +529,7 @@ footer {
         height: 130px;
     }
 }
-#header-flex {
-    flex-direction: row;
-    justify-content: space-between;
-    nav {
-        ul {
-            flex-direction: row;
-            gap: 1rem;
-            align-items: center;
-            li {
-                a {
-                    font-size: 1.1rem;
-                }
-                #contact_page_navigation {
-                    margin: 0;
-                    &:hover {
-                        background-color: $grey-black;
-                        color: $gold-yellow;
-                    }
-                }
-            }
-        }
-    }
-    #back-to-top {
-        bottom: 10px;
-        right: 60px;
-        img {
-            width: 50px;
-        }
-    }
-}
+
 
 #body-grid {
     grid-template-areas: 
@@ -561,13 +566,11 @@ footer {
                 }
             }
         }
-        #compeling_section {
-            #compeling_2 {
-                margin: 2rem 12rem 2rem 12rem;
-                h2 {
-                    font-size: 3rem;
-                    margin-bottom: 3rem;
-                }
+        #compeling_2 {
+            margin: 2rem 12rem 2rem 12rem;
+            h2 {
+                font-size: 3rem;
+                margin-bottom: 3rem;
             }
         }
         #compeling_section2 {
@@ -595,8 +598,7 @@ footer {
                 }
             }
         #newsletter {
-            @include flex(row, center, center);
-            gap: 3rem;
+            gap: 1.5rem;
             h2 {
                 font-size: 3rem;
             }
@@ -663,19 +665,23 @@ footer {
             }
         }
         #about-clients {
+            h2 {
+                @include font-set($main-font, 3rem, 700, normal, center);
+                margin: 2rem;
+            }
             article {
                 gap: 2rem;
             }
         }
         #about-contact-container {
-            padding: 5rem;
+            padding: 5rem 5rem 0 5rem;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
             grid-template-areas: 
             "contact-title contact-title"
             "contact-us contact-information";
             #contact-us{
-                margin-left: 5rem;
+                margin-left: 10rem;
                 button {
                     padding: 1rem;
                     width: 30%;
@@ -692,10 +698,6 @@ footer {
         }
     }
 
-    // FOOTER
-    footer {
-        @include flex(row, center, space-between);
-    }
 }
 }
 
