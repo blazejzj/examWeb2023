@@ -161,11 +161,6 @@
         }
     
     }
-    
-    .icons {
-        width: 150px;
-        height: 150px;
-    }
     #services {
         @include flex(column, center, center);
         gap: 3rem;
@@ -431,10 +426,6 @@
     }
 }
 
-.about-icons {
-    width: 20px;
-    height: 20px;
-}
 // FOOTER
 
 footer {
@@ -483,6 +474,7 @@ footer {
     }
 }
 
+// HEADER & FOOTER MEDIA QUERY
 @media only screen and (min-width:636px) {
     
     #header-flex {
@@ -521,6 +513,7 @@ footer {
 
 }
 
+// DESKTOP MEDIAQUERY 
 @media only screen and (min-width:1230px) {
 
 .logo {
@@ -529,7 +522,6 @@ footer {
         height: 130px;
     }
 }
-
 
 #body-grid {
     grid-template-areas: 
@@ -648,7 +640,6 @@ footer {
             transform: scale(1.06);
         }
     }
-
 
     // ABOUT 
 
